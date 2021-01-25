@@ -17,7 +17,7 @@
     <tr>
         <th scope="row">{{ $produto->id }}</th>
         <td>{{ $produto->nome }}</td>
-        <td>{{ $produto->valor }}</td>
+        <td>R$ {{ str_replace(".", ",",$produto->valor) }}</td>
         <td>
             <a class="btn btn-info" href="{{ route('produto.editar', ['id'=>$produto->id]) }}">editar</a>
             <a class="btn btn-danger" href="{{ route('produto.deletar', ['id'=>$produto->id]) }}">deletar</a>

@@ -24,7 +24,9 @@ class Produto extends Controller
     {
         if ($request->isMethod('post')) {
             //aqui ele pega todos os dados que vem do request e cria um novo produto
-            ProdutoModel::create($request->all());
+            $dados = $request->all();
+            $dados['valor']= str_replace(",", ".", $dados['valor']);
+            ProdutoModel::create($dados);
             return redirect(route('produto.listar'));
         }
         //aqui é redirecionado para o formulário de criação
@@ -52,6 +54,8 @@ class Produto extends Controller
         //aqui é pego os dados enviados no submit
         $dados = $request->all();
 
+
+        $dados['valor']= str_replace(",", ".", $dados['valor']);
         //os dados do submit é alterado no cliente que foi pego pelo id
         $produto->fill($dados);
 

@@ -1,5 +1,8 @@
 @extends('layouts.app')
 @section('content')
+    <script src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="<?php echo asset('js/teste.js')?>"></script>
 
     <h3 class="page-header">Editando o Produto ID: {{ $produto->id }}</h3>
 
@@ -14,7 +17,7 @@
 
             <div class="form-group col-md-4">
                 <label for="idade">Valor</label>
-                <input type="text" class="form-control" id="valor" name="valor" value="{{ $produto->valor  }}">
+                <input type="text" class="dinheiro form-control" id="valor" name="valor" value="{{ $produto->valor  }}">
             </div>
 
         </div>
