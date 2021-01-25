@@ -23,11 +23,17 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/produto/listar', 'Produto@listar')->name('produto.listar');
 Route::get('/produto/novo', 'Produto@criar')->name('produto.novo');
 Route::post('/produto/criar', 'Produto@criar')->name('produto.criar');
-
 Route::get('/produto/editar/{id}', 'Produto@editar')->name('produto.editar');
 Route::post('/produto/salvar', 'Produto@salvar')->name('produto.salvar');
-
 Route::get('/produto/deletar/{id}', 'Produto@deletar')->name('produto.deletar');
+
+Route::get('/empresa/listar', 'Empresa@listar')->name('empresa.listar');
+Route::get('/empresa/novo', 'Empresa@criar')->name('empresa.novo');
+Route::post('/empresa/novo', 'Empresa@criar')->name('empresa.criar');
+Route::get('/empresa/editar/{id}', 'Empresa@editar')->name('empresa.editar');
+Route::post('/empresa/salvar', 'Empresa@salvar')->name('empresa.salvar');
+Route::get('/empresa/deletar/{id}', 'Empresa@deletar')->name('empresa.deletar');
+
 
 
 
