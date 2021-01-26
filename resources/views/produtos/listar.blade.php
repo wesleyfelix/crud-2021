@@ -7,19 +7,19 @@
     <table class="table table-striped">
         <thead>
         <tr>
-            <th scope="col">ID</th>
-            <th scope="col" >Nome</th>
-            <th scope="col" >Valor</th>
-            <th scope="col" >Ações</th>
+            <th scope="col" class="text-center">ID</th>
+            <th scope="col" class="text-center">Nome</th>
+            <th scope="col" class="text-center">Valor</th>
+            <th scope="col" class="text-center">Ações</th>
         </tr>
         </thead>
     @foreach($produtos as $produto)
     <tbody>
     <tr>
-        <th scope="row">{{ $produto->id }}</th>
-        <td>{{ $produto->nome }}</td>
-        <td>R$ {{ str_replace(".", ",",$produto->valor) }}</td>
-        <td>
+        <th scope="row" class="text-center">{{ $produto->id }}</th>
+        <td class="text-center">{{ $produto->nome }}</td>
+        <td class="text-center">R$ {{ str_replace(".", ",",$produto->valor) }}</td>
+        <td class="text-center">
             <a class="btn btn-info" href="{{ route('produto.editar', ['id'=>$produto->id]) }}">editar</a>
             <a class="btn btn-danger" href="{{ route('produto.deletar', ['id'=>$produto->id]) }}">deletar</a>
         </td>
