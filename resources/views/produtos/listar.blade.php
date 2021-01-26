@@ -2,7 +2,8 @@
 @section('content')
     <h3 class="page-header">Listagem de Produtos</h3>
     <h4><a class="btn btn-success" href="{{ route('produto.novo') }}">novo</a></h4>
-<div class="align-content-center">
+<div class="align-content-center" style="padding: 10px;
+    margin: 10px;">
     <table class="table table-striped">
         <thead>
         <tr>
