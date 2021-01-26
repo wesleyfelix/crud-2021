@@ -10,8 +10,13 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
+    <!-- System js-->
+    <script src="{{ asset('js/jquery-1.10.0.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.mask.min.js') }}"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/teste.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">

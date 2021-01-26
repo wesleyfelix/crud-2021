@@ -1,10 +1,7 @@
 @extends('layouts.app')
 @section('content')
-<script src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
-<script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
-<script type="text/javascript" src="<?php echo asset('js/teste.js')?>"></script>
-    <h3 class="page-header">Criando Empresa</h3>
 
+    <h3 class="page-header">Criando Empresa</h3>
 
     <form action="{{ route('empresa.criar') }}" method="post">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
