@@ -60,9 +60,11 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('empresa.listar') }}">Empresas</a>
                             </li>
+                            @if( Auth::user()->id == 1)
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('usuario.listar') }}">Usuarios</a>
                             </li>
+                            @endif
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
