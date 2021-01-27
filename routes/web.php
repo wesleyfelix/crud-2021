@@ -34,6 +34,15 @@ Route::get('/empresa/editar/{id}', 'Empresa@editar')->name('empresa.editar');
 Route::post('/empresa/salvar', 'Empresa@salvar')->name('empresa.salvar');
 Route::get('/empresa/deletar/{id}', 'Empresa@deletar')->name('empresa.deletar');
 
+Route::get('/usuario/listar', 'User@listar')->name('usuario.listar');
+Route::get('/usuario/novo', 'User@criar')->name('usuario.novo');
+Route::post('/usuario/novo', 'User@criar')->name('usuario.criar');
+Route::get('/usuario/editar/{id}', 'User@editar')->name('usuario.editar');
+Route::post('/usuario/salvar', 'User@salvar')->name('usuario.salvar');
+Route::get('/usuario/deletar/{id}', 'User@deletar')->name('usuario.deletar');
+
+
+
 
 
 

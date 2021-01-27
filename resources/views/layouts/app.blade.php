@@ -8,7 +8,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title> Projetinho</title>
+{{--    <title>{{ config('app.name', 'Laravel') }}</title>--}}
 
     <!-- System js-->
     <script src="{{ asset('js/jquery-1.10.0.min.js') }}"></script>
@@ -58,6 +59,9 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('empresa.listar') }}">Empresas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('usuario.listar') }}">Usuarios</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
