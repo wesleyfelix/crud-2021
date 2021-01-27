@@ -9,7 +9,8 @@
     <form action="{{ route('empresa.salvar') }}" method="post">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <input type="hidden" name="id" value="{{ $empresa->id }}">
-        <div class="row">
+        <div class="row" style="padding: 10px;
+    margin: 10px;">
             <div class="form-group col-md-4">
                 <label for="razao_social">Razão Social</label>
                 <input type="text" class="form-control" id="razao_social" name="razao_social" value="{{ $empresa->razao_social }}">
@@ -56,7 +57,8 @@
                 <label for="numero">Número</label>
                 <input name="numero" type="text" class="form-control" id="numero" value="{{ $empresa->numero }}"/>
             </div>
-            <div id="actions" class="row">
+            <div id="actions" class="row" style="padding: 10px;
+    margin: 10px;">
                 <div class="col-md-12">
                     <button type="submit" class="btn btn-primary">Editar</button>
                     <a href="{{ route('empresa.listar') }}" class="btn btn-default">Cancelar</a>
