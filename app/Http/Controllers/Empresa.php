@@ -14,8 +14,13 @@ class Empresa extends Controller
     public function listar ()
     {
         $empresas = EmpresaModel::all();
-
-        return view('empresas.listar', ['empresas'=>$empresas]);
+        $totalInativos = EmpresaModel::select('id')
+            ->where('status', '=', 'Inativo')->count();
+        return view('empresas.listar',
+            [
+                'empresas'=>$empresas,
+                'totalInativos' => $totalInativos
+            ]);
     }
 
     /**
