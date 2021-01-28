@@ -13,7 +13,10 @@ class Produto extends Controller
     public function listar ()
     {
         $produtos = ProdutoModel::all();
-        return view ('produtos.listar', [ 'produtos' => $produtos]);
+        $total = ProdutoModel::sum('valor');
+        return view ('produtos.listar', [
+            'produtos' => $produtos,
+            'total' => $total]);
     }
 
     /**

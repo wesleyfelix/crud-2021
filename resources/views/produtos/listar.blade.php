@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <h3 class="page-header">Listagem de Produtos</h3>
+    <h3>Valor total de produtos R$: {{ str_replace(".", ",",$total) }}</h3>
     <h4><a class="btn btn-success" href="{{ route('produto.novo') }}">novo</a></h4>
 <div class="align-content-center" style="padding: 10px;
     margin: 10px;">
