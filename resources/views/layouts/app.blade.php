@@ -60,6 +60,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('empresa.listar') }}">Empresas</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('compra.listar') }}">Compras</a>
+                            </li>
                             @if( Auth::user()->id == 1)
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('usuario.listar') }}">Usuarios</a>

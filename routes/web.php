@@ -42,6 +42,14 @@ Route::post('/usuario/salvar', 'User@salvar')->name('usuario.salvar');
 Route::get('/usuario/deletar/{id}', 'User@deletar')->name('usuario.deletar');
 
 
+Route::get('/compras/listar', 'UserProduto@listar')->name('compra.listar');
+Route::get('/compras/novo', 'UserProduto@criar')->name('compra.novo');
+Route::post('/compras/novo', 'UserProduto@criar')->name('compra.criar');
+Route::get('/compras/editar/{id}', 'UserProduto@editar')->name('compra.editar');
+Route::post('/compras/salvar', 'UserProduto@salvar')->name('compra.salvar');
+Route::get('/compras/deletar/{id}', 'UserProduto@deletar')->name('compra.deletar');
+
+
 
 
 
