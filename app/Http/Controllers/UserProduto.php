@@ -62,7 +62,6 @@ class UserProduto extends Controller
     {
         if ($request->isMethod('post')) {
             $dados = $request->all();
-            dd($dados);
             UserProdutosModel::create($dados);
             return redirect(route('compra.listar'));
         }
