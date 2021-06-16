@@ -7,19 +7,35 @@ use App\Models\Empresa as EmpresaModel;
 
 class Empresa extends Controller
 {
-
     /**
+     * @param Request $request
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\View\View
      */
-    public function listar ()
+    public function listar (Request $request)
     {
-        $empresas = EmpresaModel::all();
-        $totalInativos = EmpresaModel::select('id')
-            ->where('status', '=', 'Inativo')->count();
+        $razao_social = $request->get('razao_social', false);
+        $status = $request->get('status', false);
+
+        $empresas = EmpresaModel::select([
+            'id',
+            'razao_social',
+            'cnpj',
+            'status'
+        ]);
+
+        if($razao_social !== false){
+            $empresas->where('razao_social','like', '%'.$razao_social.'%');
+        }
+
+        if($status !== false){
+            $empresas->where('status', $status);
+        }
+
+        $empresas = $empresas->get();
         return view('empresas.listar',
             [
                 'empresas'=>$empresas,
-                'totalInativos' => $totalInativos
+                'totalInativos' => EmpresaModel::getTotal('Inativo')
             ]);
     }
 
