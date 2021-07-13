@@ -9,12 +9,10 @@ class Empresa extends Model
 {
     const STATUS_ATIVO = 'Ativo';
     const STATUS_INATIVO = 'Inativo';
-    const STATUS_TESTE = 'Teste';
 
     public static $status = [
         self::STATUS_ATIVO => 'Ativo',
         self::STATUS_INATIVO => 'Inativo',
-        self::STATUS_TESTE => 'Teste',
     ];
 
     protected $fillable = [

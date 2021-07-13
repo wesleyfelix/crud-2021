@@ -50,7 +50,12 @@ Route::post('/compras/salvar', 'UserProduto@salvar')->name('compra.salvar');
 Route::get('/compras/deletar/{id}', 'UserProduto@deletar')->name('compra.deletar');
 
 
-
+Route::get('/colaborador/listar', 'Colaborador@listar')->name('colaborador.listar');
+Route::get('/colaborador/novo', 'Colaborador@criar')->name('colaborador.novo');
+Route::post('/colaborador/novo', 'Colaborador@criar')->name('colaborador.criar');
+Route::get('/colaborador/editar/{id}', 'Colaborador@editar')->name('colaborador.editar');
+Route::post('/colaborador/salvar', 'Colaborador@salvar')->name('colaborador.salvar');
+Route::get('/colaborador/deletar/{id}', 'Colaborador@deletar')->name('colaborador.deletar');
 
 
 
