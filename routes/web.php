@@ -33,6 +33,7 @@ Route::post('/empresa/novo', 'Empresa@criar')->name('empresa.criar');
 Route::get('/empresa/editar/{id}', 'Empresa@editar')->name('empresa.editar');
 Route::post('/empresa/salvar', 'Empresa@salvar')->name('empresa.salvar');
 Route::get('/empresa/deletar/{id}', 'Empresa@deletar')->name('empresa.deletar');
+Route::get('/empresa/robo/{id}', 'Empresa@robo')->name('empresa.robo');
 
 Route::get('/usuario/listar', 'User@listar')->name('usuario.listar');
 Route::get('/usuario/novo', 'User@criar')->name('usuario.novo');

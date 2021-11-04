@@ -52,6 +52,7 @@
         <td class="text-center">
             <a class="btn btn-info" href="{{ route('empresa.editar', ['id'=>$empresa->id]) }}">editar</a>
             <a class="btn btn-danger" href="{{ route('empresa.deletar', ['id'=>$empresa->id]) }}">deletar</a>
+            <a class="btn btn-success" href="{{ route('empresa.robo', ['id'=>$empresa->id]) }}">robô</a>
         </td>
     </tr>
     </tbody>
